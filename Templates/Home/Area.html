@@ -1,0 +1,35 @@
+{% extends 'Home\base.html' %}
+{%load static%}
+{% block title %} | Area{% endblock title %}
+
+{% block content %}
+<div class="sect sect--white">
+  <div class="container">
+    <div class="row">
+      <h1 class="row__title">
+        Our Area
+      </h1>
+      <h2 class="row__sub">Sneak peeks from our writings</h2>
+    </div>
+   
+    <div class="row row--margin">  {% for Area in OurArea %}
+      <div class="col-md-6 article-pre__col">
+        <div class="article-pre ">
+          <div class="article-pre__img article-pre__img--raw"></div>
+          <h2 class="article-pre__info">
+            <span class="article-pre__cat">{{ Area.Category }}  •  </span><span class="article-pre__aut"> {{ Area.Group}}</span> <span class="article-pre__date"> -{{ Area.Time }} Read</span>
+          </h2> <a href="{% url 'Service' %}">
+          <h1 class="article-pre__title">{{ Area.Title }}
+           <span class="article-pre__arrow--purple"> →</span></a>
+          </h1>      
+        </div> 
+      </div>{% endfor %}
+    </div> 
+    
+    <div class="row">
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

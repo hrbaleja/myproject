@@ -1,0 +1,105 @@
+{% extends 'Office\base.html' %}
+{%load static%}
+{% block title %} | Office{% endblock title %}
+{% block menu %}
+<li class="header__el header__el--blue"><a href="logout" class="btn btn--white">Logout →</a></li>
+{% endblock menu %}
+{% block content %}
+<div class="sect sect--padding-bottom">
+    <div class="container">
+        <div class="row row--center">
+            <h1 class="row__title">
+                Company Overview
+            </h1>
+            <h2 class="row__sub">Committed to improve the financial well-being of people.</h2>
+        </div>
+        <div class="row row--center row--margin">
+            <div class="col-md-4 col-sm-4 price-box price-box">
+                <div class="price-box__wrap">
+                    <div ><img src="{% static 'Images\Icon\T.png' %}" class="price-box__img"></div>
+                    <h1 class="price-box__title">
+                        Revenue
+                    </h1>
+                    <h2 class="price-box__discount">
+                        <span class="price-box__dollar"></span>₹ {{ valuesum }}00.00 Cr <span
+                            class="price-box__discount--light"></span>
+                    </h2>
+                </div>
+            </div>
+            <!-- second -->
+            <div class="col-md-4 col-sm-4 price-box price-box">
+                <div class="price-box__wrap">
+                    <div ><img src="{% static 'Images\Icon\t.png' %}" class="price-box__img"></div>
+                    <h1 class="price-box__title">
+                        Profit
+                    </h1>
+                    <h2 class="price-box__discount">
+                        <span class="price-box__dollar"></span>₹ {{ customersum }}50.00 Cr <span class="price-box__discount--light"></span>
+                    </h2>
+                </div>
+            </div>
+            <!-- Third -->
+            <div class="col-md-4 col-sm-4 price-box price-box">
+                <div class="price-box__wrap">
+                    <div ><img src="{% static 'Images\Icon\t.png' %}" class="price-box__img"></div>
+                    <h1 class="price-box__title">
+                        Clients
+                    </h1>
+                    <h2 class="price-box__discount">
+                        <span class="price-box__dollar"></span>{{ customersum }}00<span
+                            class="price-box__discount--light"></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row row--center row--margin">
+            <!-- Fourth -->
+            <div class="col-md-4 col-sm-4 price-box price-box--purple">
+                <div class="price-box__wrap">
+                    <div class="price-box__img"></div>
+                    <h1 class="price-box__title">
+                        Query
+                    </h1>
+                    <h2 class="price-box__discount">
+                        <span class="price-box__dollar"></span>{{ messagesum }}000<span
+                            class="price-box__discount--light"></span>
+                    </h2>
+                </div>
+            </div>
+            <!-- Five -->
+            <div class="col-md-4 col-sm-4 price-box price-box--violet">
+                <div class="price-box__wrap">
+                    <div class="price-box__img"></div>
+                    <h1 class="price-box__title">
+                        Service
+                    </h1>
+                    <h2 class="price-box__discount">
+                        <span class="price-box__dollar"></span>{{ servicesum }}00<span
+                            class="price-box__discount--light"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Sixth -->
+            <div class="col-md-4 col-sm-4 price-box price-box--blue">
+                <div class="price-box__wrap">
+                    <div class="price-box__img"></div>
+                    <h1 class="price-box__title">
+                        Area
+                    </h1>
+                    <h2 class="price-box__discount">
+                        <span class="price-box__dollar"></span>{{ areasum }}00<span
+                            class="price-box__discount--light"></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}

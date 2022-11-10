@@ -1,0 +1,27 @@
+Python -m django  startproject AgriUpdate
+python Manage.py makemigrations
+python Manage.py migrate
+python Manage.py createsuperuser
+python Manage.py startapp Home
+python Manage.py startapp Office
+python Manage.py startapp Client
+Regi in Setting File
+
+
+Required Package
+python  -m pip install reportlab
+
+
+pip install django-admin-interface
+Add In Setting
+'admin_interface',
+'colorfield',
+
+STATICFILES_DIRS = [BASE_DIR / "Static"]
+'DIRS': [os.path.join(BASE_DIR,'Templates')],
+
+
+Work In Progress 
+How To load Image from path in database ?
+
+

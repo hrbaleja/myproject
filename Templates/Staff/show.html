@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block title %} | Show{% endblock title %}
+{% block content %}
+<style>
+    #datat {border-collapse: collapse;width: 80%; margin-left:10%;margin-right:10% ; }    
+    #datat td, #datat th {border: 1px solid #ddd;padding: 8px;}    
+    #datat tr:nth-child(even){background-color: #f2f2f2;}    
+    #datat tr:hover {background-color: #ddd;}    
+    #datat th {padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #d9edfe;color: black;}
+</style>
+<table id="datat">
+    <thead>
+            <tr>
+            <th>ID</th>
+            <th>Name</th>            
+            <th>Address</th>
+            <th>Date Of Birth</th>
+            <th>Email</th>
+            <th>Contact No.</th>
+            <th>Edit</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for Customers in Customer %}
+        <tr>
+            <td>{{ Customers.id }}</td>
+            <td>{{Customers.First_name}}&nbsp;&nbsp;{{Customers.Last_name}}</td>
+            <td>{{Customers.Address}}</td>
+            <td>{{Customers.DOB}}</td>
+            <td>{{Customers.Email}}</td>
+            <td>{{Customers.Contact}}</td>
+            <td>             <a href="/edit/{{ Customers.id }}">Edit</a></td>
+              <td>  <a href="/delete/{{Customers.id}}">Delete</a>            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<button class="btn btn--width"><a  href="/emp" style="color: white">Add New</a></button>
+{% endblock content %}
