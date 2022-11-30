@@ -32,7 +32,7 @@ def recordoffice(request):
     context ={'Topic': Topics,'ourservice': Services,'ourArea': Areao}
     return render(request, "Office\Record.html", context )
 
-def Service(request):   
+def Aservice(request):   
     if request.method == "POST":
         form = Ourserviceform(request.POST)
         if form.is_valid():

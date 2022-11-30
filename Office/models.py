@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Ourservice(models.Model):
-    image=models.ImageField(upload_to='Static\Dataimage', blank=True)
+    image=models.ImageField(upload_to='Dataimage', blank=True)
     title=models.CharField(max_length=100)
     people=models.CharField(max_length=10)
     discount=models.CharField(max_length=10)

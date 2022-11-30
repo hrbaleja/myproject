@@ -7,6 +7,6 @@ urlpatterns = [
    path('clientoffice', views.clientoffice,name="clientoffice"),
    path('recordoffice', views.recordoffice,name="recordoffice"),
    path('logout', views.logoutUser,name="logout"),
-   path('Service',views.Service,name="Service"),
+   path('Aservice',views.Aservice,name="Aservice"),
   
 ]
