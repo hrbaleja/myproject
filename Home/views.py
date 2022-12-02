@@ -86,3 +86,21 @@ def data(request):
         form = Ourserviceform()
     return render(request, 'data.html', {'form': form})
     
+    """
+    if request.user.is_anonymous: 
+        if request.method == "POST":
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                messages.info(request, f"You are now logged in as {username}.")
+                return redirect("data")
+            else:
+                messages.error(request, "Invalid username or password.")
+                return render(request, 'Client/Login.html')
+        return render(request, 'Auth/Login.html')        
+        
+    else:
+        return redirect("data")
+    """
