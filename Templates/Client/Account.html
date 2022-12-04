@@ -1,0 +1,169 @@
+{% extends 'Client\Base.html' %}
+{%load static%}
+{% block title %} | Account{% endblock title %}
+
+{% block content %}
+
+
+<div class="sect sect--white">
+    <div class="container header__container" style="width:80%; ">
+        {% for tr in UserBankAccount %}
+        <div class="header__logo">
+            <h1 class="header__title"> <span class="header__light">Comapny Name : </span> </h1>
+            <h1 class="header__title">{{user.username}} Pvt. Ltd.</h1>
+        </div>
+        {% for icon in UserIcon %}
+        <img style="float:right ;" class="header__img" src="{{icon.icon.url}}">
+        {%endfor%}
+        <div style="margin-top:1% ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light">Comapny Code : </span> </h1>
+                <h2 class="header__title">{{tr.id}} </h2>
+            </div>
+        </div>
+        <div style="margin-top:1% ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light"> Owner Name : </span> </h1>
+                <h2 class="header__title">{{tr.user.first_name}} {{tr.user.last_name}} </h2>
+            </div>
+        </div>
+        <div style="margin-top:1% ; float:right ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light">{{ date }} </span> </h1>
+            </div>
+        </div>
+        <div style="margin-top:1% ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light">Account No. : </span> </h1>
+                <h2 class="header__title">  <td>{{tr.account_no}}</td> </h2>
+            </div>
+        </div>
+        <div style="margin-top:1% ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light">Account Balance : </span> </h1>
+                <h2 class="header__title">₹{{tr.balance}} </h2>
+            </div>
+        </div>
+        <div style="margin-top:1% ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light">Account Type : </span> </h1>
+                <h2 class="header__title">{{tr.account_type}} </h2>
+            </div>
+        </div>
+
+        {% for add  in UserAddress %}
+                    
+                    
+        <div style="margin-top:1% ;">
+            <div class="header__logo">
+                <h1 class="header__title"> <span class="header__light">Address : </span> </h1>
+                <h2 class="header__title">{{add.street_address}}, {{add.city}}  {{add.postal_code}}  {{add.country}}</h2>
+            </div>
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+
+
+    </div>
+
+
+    <style>
+        #datat {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 5%
+        }
+
+        #datat td,
+        #datat th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #datat tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #datat tr:hover {
+            background-color: #ddd;
+        }
+
+        #datat th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #d9edfe;
+            color: black;
+        }
+    </style>
+    <div class="sect sect--white">
+        <div class="row row--margin">
+            <table id="datat">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Full Name</th>
+                        <th>Gender</th>
+                        <th>Birth Date</th>
+                        <th>Account No</th>
+                        <th>Account Type</th>
+                        <th>Balance</th>
+                        <th>Account Open Date</th>
+                        <th>First Deposite Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tr in UserBankAccount %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{tr.user.first_name}} {{tr.user.last_name}}</td>
+                        <td>{{tr.gender}}</td>
+                        <td>{{tr.birth_date}}</td>
+                        <td>{{tr.account_no}}</td>
+                        <td>{{tr.account_type}}</td>
+                        <td>{{tr.balance}}</td>
+                        <td>{{tr.interest_start_date}}</td>
+                        <td>{{tr.initial_deposit_date}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="sect sect--white">
+        <div class="row row--margin">
+            <table id="datat">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Reference</th>
+                        <th>Amount</th>
+                        <th>Balance</th>
+                        <th>Transaction Type</th>
+                        <th>Timestamp</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tr in Transaction %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ date }} </td>
+                        <td>{{tr.description}}</td>
+                        <td>{{tr.referenceno}}</td>
+                        <td>{{tr.amount}}</td>
+                        <td>{{tr.balance_after_transaction}}</td>
+                        <td>{{tr.transaction_type}}</td>
+                        <td>{{tr.timestamp}}</td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endblock content %}

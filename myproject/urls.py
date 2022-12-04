@@ -21,6 +21,7 @@ urlpatterns = [
     path('',include('Home.urls')),
     path('client/', include('Client.urls')),
     path('office/', include('Office.urls')),
+     path('Auth/', include('Auth.urls')),
 ]
 app_name = 'Client'
 app_name ='Office'

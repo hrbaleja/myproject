@@ -7,10 +7,8 @@ urlpatterns = [
    path('area', views.Area, name='Area'),
    path('about', views.About, name='About'),
    path('contact', views.Contact, name='Contact'),
-   path('Brochure', views.Brochure,name='Brochure'),
-
-   path('info', views.info, name='info'),
-   path('data', views.data, name='data'),
+   path('Brochure', views.Brochure,name='Brochure'), 
+  
 ]
 
 

@@ -40,8 +40,7 @@ def Aservice(request):
             return redirect('recordoffice')           
     else:
         form = Ourserviceform()
-    return render(request, 'data.html', {'form': form})
-
+    return render(request, 'Office\Service.html', {'form': form})
 
 def logoutUser(request):
     logout(request)

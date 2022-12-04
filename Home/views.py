@@ -68,23 +68,8 @@ def Brochure(request):
     buffer.seek(0)   
     return FileResponse(buffer, as_attachment=True, filename="Brochure.pdf")
 
-def info(request):
-    prg = Ourservice.objects.all()   
-    return render(request, "Info.html",{'Ourservice': prg})
 
 
-def data(request):   
-    if request.method == "POST":
-        form = Ourserviceform(request.POST)
-        if form.is_valid():
-            try:
-                form.save()
-                return redirect('service')
-            except:
-                pass
-    else:
-        form = Ourserviceform()
-    return render(request, 'data.html', {'form': form})
     
     """
     if request.user.is_anonymous: 
