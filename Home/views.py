@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from Office.models import Topic, Ourservice,OurArea,Contactu
 from Office.forms import Ourserviceform
+from Office.models import About
 # Create your views here.
 def index(request):
     return render(request, 'Home\index.html')
@@ -18,7 +19,10 @@ def Area(request):
     
 
 def About(request):
-    return render(request, "Home\About.html")
+  #  Abou= About.objects.all()    
+   # context ={'About':Abou}
+    return render(request, "Home\About.html" )
+ 
 
 
 def Contact(request):

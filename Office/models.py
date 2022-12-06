@@ -1,5 +1,7 @@
 from django.db import models
-
+from django.db import models
+from Client.constants import *
+from django.contrib.auth.models import User
 
 class Ourservice(models.Model):
     image=models.ImageField(upload_to='Dataimage', blank=True)
@@ -49,8 +51,7 @@ class Customer(models.Model):
     password = models.CharField(max_length=50)  
     Contact = models.CharField(max_length=10) 
 
-    class Meta:  
-        db_table = "Customer" 
+
     def __str__(self):
         return self.First_name
 
@@ -59,3 +60,17 @@ class Topic(models.Model):
     
     def __str__(self):
         return self.Title
+
+class About(models.Model):
+    Image=models.ImageField(upload_to='Aboutcompany')
+    Company=models.CharField(max_length=256,  choices=COMPANY_CHOICES)
+    Desc=models.CharField(max_length=500)
+    Icon=models.ImageField(upload_to='Abouticon')
+    Person=models.OneToOneField(  User,  on_delete=models.CASCADE,)
+    Designation=models.CharField(max_length=100) 
+    Time = models.DateTimeField(auto_now_add=True)
+
+  
+
+    def __str__(self):
+        return self.Company

@@ -1,16 +1,12 @@
 from Office.forms import SignUpForm
-import datetime
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 from .models import *
-# Create your views here.
-
-#  Website authentication
 
 
-def login(request):
+def u_login(request):
     if request.user.is_anonymous:
         if request.method == "POST":
             username = request.POST['username']

@@ -1,4 +1,6 @@
+
 {% extends 'Home\base.html' %}
+{%load static%}
 {% block title %} | About Us{% endblock title %}
 
 {% block content %}
@@ -34,43 +36,45 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
+      
     
+      
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
           <div class="item__content">
-          <img class="item__img" src="https://cdn.worldvectorlogo.com/logos/slack-1.svg" alt="Slack"><span class="item__name">slack</span>
+          <img class="item__img" src="{% static 'Images\favicon.png' %}" alt="B Group"><span class="item__name">B Group Pvt. Ltd.</span>
           <p class="item__description">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
           </p>
             </div>
           <div class="item__avatar"></div>
-          <p class="item__people">Josh Doe</p>
-      <p class="item__occupation">Ceo of Google</p>
+          <p class="item__people">Hitesh Baleja</p>
+      <p class="item__occupation">Student</p>
         </div>
         
             <div class="item">
           <div class="item__content">
-          <img class="item__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Google-favicon-2015.png/150px-Google-favicon-2015.png" alt="Google"><span class="item__name">google</span>
+          <img class="item__img" src="{% static 'Images\B.jpg' %}" alt="Travel"><span class="item__name">Travel and Tourism Group</span>
           <p class="item__description">
              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
           </p>
             </div>
           <div class="item__avatar"></div>
-         <p class="item__people">Mary Tompson</p>
-      <p class="item__occupation">Ceo of Dribbble</a>
+         <p class="item__people">Hitesh Baleja</p>
+      <p class="item__occupation">Student</a>
         </div>
         
     <div class="item">
           <div class="item__content">
-          <img class="item__img" src="https://www.hrexaminer.com/wp-content/uploads/2016/10/2016-10-11-hrexaminer-stackoverflow-6-xxl-sq-250px.png" alt="Stackoverflow"><span class="item__name">stackoverflow</span>
+          <img class="item__img" src="{% static 'Images\T.png' %}" alt="Investment"><span class="item__name">Investment Group</span>
           <p class="item__description">
               Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
           </p>
             </div>
           <div class="item__avatar"></div>
-          <p class="item__people">Andrew Palmer</p>
-      <p class="item__occupation">Ceo of Slack</a>
+          <p class="item__people">Hitesh Baleja</p>
+      <p class="item__occupation">Student</a>
         </div>
     
       </div>

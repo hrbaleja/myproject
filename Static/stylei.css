@@ -50,7 +50,7 @@ body {
 
 .row--margin {
   margin-top: 45px;
- 
+
 }
 
 .row__title {
@@ -70,7 +70,7 @@ body {
 
 .price-box {
   padding: 0px 25px;
-  
+
 }
 
 .price-box__wrap {
@@ -584,6 +584,7 @@ body {
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
 }
+
 .article-pre__img--raw {
   background-image: url(https://images.unsplash.com/photo-1592659762303-90081d34b277?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80);
 }
@@ -766,8 +767,8 @@ body {
 }
 
 
-.footer {  
-  padding: 40px 0; 
+.footer {
+  padding: 40px 0;
 
 }
 
@@ -921,9 +922,9 @@ body {
     width: 100%;
     float: none;
     align-items: center;
-    
-   
-  
+
+
+
   }
 
   .form-group {

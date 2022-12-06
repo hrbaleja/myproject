@@ -4,7 +4,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 from .models import *
+from django.contrib.auth.decorators import login_required
 # Create your views here.
+
 
 def client(request):
     return render(request, 'Client\index.html')

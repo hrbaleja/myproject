@@ -48,6 +48,12 @@
           <li class="header__el"><a href="{% url 'account' %}">Account</a></li>
           <li class="header__el"><a href="{% url 'portfolio' %}">Portfolio</a></li>
           <li class="header__el"><a href="{% url 'transction' %}">Transction</a></li>
+          {% if request.user.is_authenticated %}
+          <li class="header__el"><a href="{% url 'logout' %}"><img src="{% static 'Images/hh.png' %}"></a></li>
+          {% else %}
+          <li class="header__el"><a href="{% url 'login' %}"><img src="{% static 'Images/user.png' %}"></a></li>
+          <li class="header__el"><a href="{% url 'register' %}"><img src="{% static 'Images/user.png' %}"></a></li>
+          {% endif %}
           {% block menu %}{% endblock menu %}
 
         </ul>

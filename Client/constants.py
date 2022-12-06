@@ -16,14 +16,14 @@ TRANSACTION_TYPE_CHOICES = (
     (INTEREST, 'Interest'),
 )
 
-India = 'India'
-US = 'US'
-UK = 'UK'
+A = 'India'
+B = 'US'
+C = 'UK'
 
 COUNTRY_CHOICES = (
-    (India, 'India'),
-    (US, 'US'),
-    (UK, 'UK'),
+    (A, 'India'),
+    (B, 'US'),
+    (C, 'UK'),
 )
 
 A = 'Buying overseas property. '
@@ -45,4 +45,14 @@ TRANSACTION_TYPE = (
     (F,  ' Paying for overseas travel.'),
     (G, ' Paying for a destination wedding.'),
     (H,  'Mortgage payments for a home abroad.'),
+)
+
+A = 'B Group Of Group'
+B = 'Travel and Tourism Group'
+C = 'Investment Group'
+
+COMPANY_CHOICES = (
+    (A, 'B Group Of Group'),
+    (B, 'Travel and Tourism Group'),
+    (C, 'Investment Group'),
 )

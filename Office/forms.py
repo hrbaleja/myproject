@@ -25,8 +25,7 @@ class Meta:
     fields = "__all__"
 
     def save(self, commit=True):
-        user = super (SignUpForm , self ).save(commit=False)
-       
+        user = super (SignUpForm , self ).save(commit=False)       
         if commit :
             user.save()
 

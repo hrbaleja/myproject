@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Office.models import Ourservice,OurArea,Contactu,Customer,Topic
+from Office.models import *
 
 # Register your models here.
 class ServiceAdmin(admin.ModelAdmin):
@@ -21,3 +21,6 @@ admin.site.register(Customer,CustomerAdmin)
 class TopicAdmin(admin.ModelAdmin):
     list_display = ('id','Title')
 admin.site.register(Topic,TopicAdmin)
+class messageAdmin(admin.ModelAdmin):
+    list_display = ('id','Image', 'Company','Desc','Icon','Person','Designation')
+admin.site.register(About,messageAdmin)
