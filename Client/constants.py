@@ -56,3 +56,34 @@ COMPANY_CHOICES = (
     (B, 'Travel and Tourism Group'),
     (C, 'Investment Group'),
 )
+
+A='January'
+B='February'
+C = 'March '
+D = 'April'
+E = 'May'
+F = 'June'
+G = 'July'
+H = 'August'
+I= 'September'
+J='October'
+K='November'
+L='December'
+
+
+
+Month_Choice = (
+    (A, 'January'),
+    (B, 'February'),   
+    (C, 'March'),
+    (D,  'April'),
+    (E,  'May'),
+    (F, 'June'),
+    (G,  'July'),
+    (H,  'August'),
+    (I,  'September'),
+    (J, 'October'),
+    (K,  'November'),
+    (L,  'December'),
+
+)

@@ -74,3 +74,9 @@ class About(models.Model):
 
     def __str__(self):
         return self.Company
+class Revenue(models.Model):
+    Revenue = models.DecimalField(decimal_places=2, max_digits=12)
+    Month = models.CharField(max_length=256,  choices=Month_Choice)
+
+    def __str__(self):
+        return str(self.Month)

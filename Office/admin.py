@@ -24,3 +24,7 @@ admin.site.register(Topic,TopicAdmin)
 class messageAdmin(admin.ModelAdmin):
     list_display = ('id','Image', 'Company','Desc','Icon','Person','Designation')
 admin.site.register(About,messageAdmin)
+
+class RevenueAdmin(admin.ModelAdmin):
+    list_display = ('id','Revenue', 'Month')
+admin.site.register(Revenue,RevenueAdmin)

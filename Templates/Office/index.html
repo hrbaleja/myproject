@@ -8,11 +8,11 @@
 <div class="sect sect--padding-bottom">
     <div class="container">
         <div class="row row--center">
-            <h1 class="row__title">
-                Company Overview
-            </h1>
-            <h2 class="row__sub">Committed to improve the financial well-being of people.</h2>
-        </div>
+            <h1 class="site__title">  Company Overview</h1>
+            <h2 class="site__subtitle">Committed to improve the financial well-being of people.</h2>         
+            <div id="chart-2" class="site__subtitle" style="width: 100%; ">{{ output2|safe }}</div> 
+                                
+         </div>        
         <div class="row row--center row--margin">
             <div class="col-md-4 col-sm-4 price-box price-box">
                 <div class="price-box__wrap">
@@ -88,13 +88,14 @@
                         Area
                     </h1>
                     <h2 class="price-box__discount">
-                        <span class="price-box__dollar"></span>{{ areasum }}00<span
+                        <span class="price-box__dollar"></span>{{Revenu}}00<span
                             class="price-box__discount--light"></span>
                     </h2>
                 </div>
             </div>
         </div>
-    </div>
+        <div id="chart-1" class="site__subtitle"  style="width: 100%; ">{{ output1|safe }}</div> 
+     </div>
 </div>
 
 
