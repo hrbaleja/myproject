@@ -1,9 +1,9 @@
 from django.contrib import admin
-from Office.models import *
+from Office.models import Ourservice,OurArea,Contactu,Customer,Topic,About,Revenue
 
 # Register your models here.
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'image','people','discount','price','lista','listb','listc','listd','liste')
+    list_display = ('id','title', 'image','people','discount','price','list_i','list_ii','list_iii','list_iv','list_v')
 admin.site.register(Ourservice,ServiceAdmin)
 
 class AreaAdmin(admin.ModelAdmin):

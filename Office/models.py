@@ -9,11 +9,11 @@ class Ourservice(models.Model):
     people=models.CharField(max_length=10)
     discount=models.CharField(max_length=10)
     price=models.CharField( max_length=10)
-    lista=models.CharField(max_length=100)
-    listb=models.CharField(max_length=100)
-    listc=models.CharField(max_length=100)
-    listd=models.CharField(max_length=100,blank=True)
-    liste=models.CharField(max_length=100,blank=True)
+    list_i=models.CharField(max_length=100)
+    list_ii=models.CharField(max_length=100)
+    list_iii=models.CharField(max_length=100)
+    list_iv=models.CharField(max_length=100,blank=True)
+    list_v=models.CharField(max_length=100,blank=True)
 
     def __str__(self):
         return self.title

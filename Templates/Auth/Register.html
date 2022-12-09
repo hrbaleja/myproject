@@ -12,10 +12,11 @@
             <form method="post" style="margin-right:20%;margin-left: 20%;">
               {% csrf_token %}
               {% for field in form %}
-              <p>               
+              <p>
+              <div style="float:left;">{{ field.label }}</div>
                 {{ field }}
                 {% for error in field.errors %}
-              <p style="color: red">{{ error }}</p>
+              <p style="color: red;float:left;">{{ error }}</p><br>
               {% endfor %}
               </p>
               {% endfor %}

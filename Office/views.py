@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render,redirect
-from Office.models import *
+from Office.models import Ourservice,Revenue,Contactu,Topic,Customer,OurArea
 from django.contrib.auth import  logout
 from Office.forms import Ourserviceform
 from django.contrib.auth.decorators import user_passes_test

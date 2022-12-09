@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Home',
     'Client',
     'Office',
+    'captcha',
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from Office.models import Topic, Ourservice,OurArea,Contactu
+from Office.models import *
 from Office.forms import Ourserviceform
 from Office.models import About
 # Create your views here.

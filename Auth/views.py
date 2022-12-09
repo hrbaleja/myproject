@@ -40,21 +40,13 @@ def logoutUser(request):
 
 
 def register(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        username = request.POST['username']
-        password1 = request.POST['password1']
-        password2 = request.POST['password2']
-        email = request.POST['email']
-        user = User.objects.create_user(
-            username=username, password=password1, email=email, first_name=first_name, last_name=last_name)
-        user.is_staff = True
-        user.save()
-        messages.info(
-            request, "Account created successfully please login again")
-        return redirect('login')
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.info(request, "Account created successfully please login again")
+            return redirect('login')           
     else:
-        form = SignUpForm()
+        form = SignUpForm()        
         return render(request, 'Auth/Register.html', {'form': form})
         # return render(request, 'Client/Register.html')
