@@ -8,5 +8,10 @@ urlpatterns = [
    path('recordoffice', views.recordoffice,name="recordoffice"),
    path('logout', views.logoutUser,name="logout"),
    path('Aservice',views.Aservice,name="Aservice"),
-  
+
+
+   #CURD 
+   path('edit/<int:id>', views.edit),     
+   path('delete/<int:id>', views.delete),
+   path('adelete/<int:id>', views.delete),
 ]

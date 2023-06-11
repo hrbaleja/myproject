@@ -2,63 +2,8 @@
 {%load static%}
 {% block title %} | Edit{% endblock title %}
 {% block content %}
-<form method="POST" action="/update/{{Customer.id}}">
-    {% csrf_token %}
-
-
-    <div>          
-     <h3>Update Details</h3>   
-    </div>  
-    <div>
-        <p>First  Name:</p>
-        <div>
-            <input type="text" name="First_name" value="{{Customer.First_name}}" />
-        </div>
-    </div>
-    <div>
-        <p>Last Name :</p>
-        <div>
-            <input type="text" name="Last_name" value="{{Customer.Last_name}}" />
-        </div>
-    </div>
-    <div>
-        <p>Address:</p>
-        <div>
-            <input type="text" name="Address" value="{{Customer.Address}}" />
-        </div>
-    </div>
-    <div>
-        <p>DOBdate:</p>
-        <div>
-            <input type="text" name="DOB" value="{{Customer.DOB}}" />
-        </div>
-    </div>
-    <div>
-        <p>Email:</p>
-        <div>
-            <input type="text" name="Email" value="{{Customer.Email}}" />
-        </div>
-    </div>
-    <div>
-        <p>password:</p>
-        <div>
-            <input type="text" name="password" value="{{Customer.password}}" />
-        </div>
-    </div>
-    <div>
-        <p>Contact:</p>
-        <div>
-            <input type="text"  name="Contact" value="{{Customer.Contact}}" />
-        </div>
-    </div>
-    <div>
-        <br>
-        <button type="submit">Update</button>
-    </div>
-    
-</form>
-
-     
+<form method="POST" action="/update/{{Service.id}}">
+       
           <h1 class="row__title">Register</h1>
   
           <div class="col-md-12">

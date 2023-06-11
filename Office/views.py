@@ -20,6 +20,9 @@ class DecimalEncoder(json.JSONEncoder):
 def index(request):
     return render(request, 'Home\index.html')
 
+
+#chart code For DashBoard
+
 @user_passes_test(lambda u: u.is_superuser,login_url='login')
 def office(request): 
     dataSource = {}
@@ -69,15 +72,12 @@ def office(request):
       data['value'] =  json.dumps(d, cls=DecimalEncoder)
       dataSourcea['data'].append(data)
       
-    # Create an object for the overlappedbar2d chart using the FusionCharts class constructor
     overlappedcolumn2d = FusionCharts("column3d", "ex1" , "1000", "400", "chart-1", "json", dataSourcea)
 
        
-    # Create an object for the column2d chart using the FusionCharts class constructor
     column2d = FusionCharts("pie3d", "ex2" , "100%", "500", "chart-2", "json", dataSource)   
     
    # context={'output1' : overlappedcolumn2d.render(), 'output2' : column2d.render()}
-    # returning complete JavaScript and HTML code, which is used to generate chart in the browsers. 
 
     Contacts=Contactu.objects.all().count()
     Customers = Customer.objects.all().count()
@@ -116,7 +116,50 @@ def Aservice(request):
         form = Ourserviceform()
     return render(request, 'Office\Service.html', {'form': form})
 
+@user_passes_test(lambda u: u.is_superuser,login_url='login')
+def Eservice(request):   
+    if request.method == "POST":
+        form = Ourserviceform(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('recordoffice')           
+    else:
+        form = Ourserviceform()
+    return render(request, 'Office\Service.html', {'form': form}) 
+
+
+
 def logoutUser(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
     return redirect("index")
+
+
+#CURD Code
+ 
+def edit(request, id):
+    Service = Ourservice.objects.get(id=id)
+    form =Ourserviceform(instance=Service)
+
+    if request.method == 'POST':
+        form = Ourserviceform(request.POST, instance=Service)
+        if form.is_valid():
+            form.save()
+            return redirect('recordoffice')
+
+    context = {
+        'Service': Service,
+        'form': form,
+    }
+    return render(request, 'Office\Edit.html', context)
+
+def delete(request, id):
+    tp = Topic.objects.get(id=id)
+    if request.method == 'POST':
+        tp.delete()
+        return redirect('recordoffice')
+
+    context = {
+        'Topic': tp,
+    }
+    return render(request, 'office\Delete.html', context)

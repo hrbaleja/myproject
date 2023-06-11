@@ -1,6 +1,6 @@
 {% extends 'Office/base.html' %}
 {%load static%}
-{% block title %} ~ Add Service{% endblock title %}
+{% block title %} ~ Edit{% endblock title %}
 
 {% block content %}
 
@@ -12,7 +12,7 @@
             <div class="col-md-12">
                 <div class="site">
                     <h2 class="site__subtitle">Add New Serive</h2>
-                    <form method="post" style="margin-right:20%;margin-left: 20%;">
+                    <form method="post" style="margin-right:20%;margin-left: 20%;" >
                         {% csrf_token %}
                         {% for field in form %}    <p>
                             <div style="float:left ;">  {{ field.label }}</div>
@@ -22,7 +22,7 @@
                         {% endfor %}
                         </p>
                         {% endfor %}
-                        <button type="submit" class="btn btn--width">Add</button>
+                        <button type="submit" class="btn btn--width">Update</button>
                       </form>                   
                 </div>
             </div>

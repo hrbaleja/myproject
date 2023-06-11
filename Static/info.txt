@@ -10,9 +10,9 @@ Regi in Setting File
 
 Required Package
 python  -m pip install reportlab
-
-
 pip install django-admin-interface
+
+
 Add In Setting
 'admin_interface',
 'colorfield',

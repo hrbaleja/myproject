@@ -22,10 +22,10 @@ urlpatterns = [
     path('client/', include('Client.urls')),
     path('office/', include('Office.urls')),
     path('Auth/', include('Auth.urls')),
-    path('captcha/',include("captcha.urls")) 
 ]
 app_name = 'Client'
 app_name ='Office'
+
 
 from django.conf.urls.static import static
 from django.conf import settings

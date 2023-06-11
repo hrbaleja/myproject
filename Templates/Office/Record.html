@@ -2,7 +2,6 @@
 {%load static%}
 {% block title %} | Office{% endblock title %}
 {% block menu %}
-<li class="header__el header__el--blue"><a href="logout" class="btn btn--white">Logout →</a></li>
 {% endblock menu %}
 {% block content %}
 
@@ -57,14 +56,14 @@
                 <tr>
                     <td>{{ Topics.id }}</td>
                     <td>{{Topics.Title}}</td>
-                    <td><a href="/edit/{{ Topics.id }}">Edit</a></td>
-                    <td><a href="/delete/{{Topics.id}}">Delete</a></td>
+                    <td><a href="/office/edit/{{Topics.id }}">Edit</a></td>
+                    <td><a href="/office/delete/{{Topics.id}}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
         <br>
-        <button style="margin-left: 10%;" class="btn btn--width"><a href="/emp" style="color: white">Add
+        <button style="margin-left: 10%;" class="btn btn--width"><a href="/add" style="color: white">Add
                 New</a></button>
     </div>
     <div class="container">
@@ -94,14 +93,14 @@
                     <td>{{Area.Category}}</td>
                     <td>{{ Area.Group }}</td>
                     <td>{{Area.Time}}</td>
-                    <td><a href="/edit/{{ Area.id }}">Edit</a></td>
-                    <td><a href="/delete/{{Area.id}}">Delete</a></td>
+                    <td><a href="/office/edit/{{ Area.id }}">Edit</a></td>
+                    <td><a href="/office/adelete/{{Area.id}}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
         <br>
-        <button style="margin-left: 10%;" class="btn btn--width"><a href="/emp" style="color: white">Add
+        <button style="margin-left: 10%;" class="btn btn--width"><a href="/add" style="color: white">Add
                 New</a></button>
     </div>
     <div class="container">
@@ -141,14 +140,14 @@
                     <td>{{Service.list_iii}}</td>
                     <td>{{ Service.list_iv }}</td>
                     <td>{{Service.list_v}}</td>
-                    <td><a href="/edit/{{ Service.id }}">Edit</a></td>
-                    <td><a href="/delete/{{Service.id}}">Delete</a></td>
+                    <td><a href="/office/edit/{{Service.id }}">Edit</a></td>
+                    <td><a href="/office/delete/{{Service.id}}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
         <br>
-        <button style="margin-left: 10%;" class="btn btn--width"><a href="/emp" style="color: white">Add
+        <button style="margin-left: 10%;" class="btn btn--width"><a href="/office/Aservice" style="color: white">Add
                 New</a></button>
     </div>
 </div>
